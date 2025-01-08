@@ -1,0 +1,14 @@
+/home/stel/Documents/cs/maze_no_way/Maze/bin/Debug/net8.0/Maze
+/home/stel/Documents/cs/maze_no_way/Maze/bin/Debug/net8.0/Maze.deps.json
+/home/stel/Documents/cs/maze_no_way/Maze/bin/Debug/net8.0/Maze.runtimeconfig.json
+/home/stel/Documents/cs/maze_no_way/Maze/bin/Debug/net8.0/Maze.dll
+/home/stel/Documents/cs/maze_no_way/Maze/bin/Debug/net8.0/Maze.pdb
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.GeneratedMSBuildEditorConfig.editorconfig
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.AssemblyInfoInputs.cache
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.AssemblyInfo.cs
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.csproj.CoreCompileInputs.cache
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.dll
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/refint/Maze.dll
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.pdb
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.genruntimeconfig.cache
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/ref/Maze.dll
