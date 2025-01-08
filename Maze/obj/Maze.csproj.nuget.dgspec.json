@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/stel/maze_game/Maze/Maze.csproj": {}
+    "/home/stel/Documents/cs/maze_no_way/Maze/Maze.csproj": {}
   },
   "projects": {
-    "/home/stel/maze_game/Maze/Maze.csproj": {
+    "/home/stel/Documents/cs/maze_no_way/Maze/Maze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/stel/maze_game/Maze/Maze.csproj",
+        "projectUniqueName": "/home/stel/Documents/cs/maze_no_way/Maze/Maze.csproj",
         "projectName": "Maze",
-        "projectPath": "/home/stel/maze_game/Maze/Maze.csproj",
+        "projectPath": "/home/stel/Documents/cs/maze_no_way/Maze/Maze.csproj",
         "packagesPath": "/home/stel/.nuget/packages/",
-        "outputPath": "/home/stel/maze_game/Maze/obj/",
+        "outputPath": "/home/stel/Documents/cs/maze_no_way/Maze/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/stel/.nuget/NuGet/NuGet.Config"

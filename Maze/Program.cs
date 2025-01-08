@@ -10,18 +10,18 @@ namespace Maze {
         public static MapHandler mapHandler = new MapHandler(); 
 
         // Game settings etc.
-        public static Boolean showfps = false;
-        public static int refreshDelay = 256;
+        public static Boolean showfps = true;
+        public static int refreshDelay = 16;
         public static Boolean quit = false;
         public const int maxPlayers = 2;
         public static int plrCount = 1;
 
         // Game stage
+        public static int gameState = 0; 
+        // 0 = menu; 1 = in game; 2 = paused
+        public static int optionSelected = 0;
         public static string currentLevel = "m0";
-        //public static string[,]? currentMap;
         public static string[,] currentMap = Maps.maze00;
-
-        public static int gameState = 1; // 0 = menu; 1 = in game; 2 = paused
 
         // Game functions
         static void sleep(int ms) {
@@ -39,13 +39,28 @@ namespace Maze {
         // Main loop
         static void Main(String[] args) {
             // Game state handling
-            while (gameState == 0) {
-                /* 
-                * 
-                *   TODO:
-                *       Make menu - starting screen 
-                *
-                */
+            while (gameState == 0 && !quit) {
+                Console.WriteLine("\n");
+                Console.WriteLine("      ╔═════════════════╗");
+                Console.WriteLine(optionSelected == 0 ?
+                                        "      ║  OPTIONS        ║" :
+                                        "      ║OPTIONS          ║"
+                );
+                Console.WriteLine(optionSelected == 1 ?
+                                        "      ║  PLAY           ║" :
+                                        "      ║PLAY             ║"
+                );
+                Console.WriteLine(optionSelected == 2 ?
+                                        "      ║  QUIT           ║" :
+                                        "      ║QUIT             ║"
+                );
+                Console.WriteLine("      ╚═════════════════╝");
+                Console.WriteLine("\n");
+
+                inputHandler.update(0);
+
+                sleep(refreshDelay);
+                Console.Clear();
             }
 
             // Initial setup
@@ -66,7 +81,7 @@ namespace Maze {
                 
                 if (gameState == 1) { // In game
                     // Listen to keyboard
-                    inputHandler.update();
+                    inputHandler.update(1);
 
                     // Update maze
                     mapHandler.updateMap(
@@ -79,11 +94,28 @@ namespace Maze {
                         currentMap == null ? Maps.maze00 : currentMap
                     );
                 } else if (gameState == 2) { // Paused
-                    // TODO: Pause menu
+                    Console.WriteLine("\n");
+                    Console.WriteLine("      ╔═════════════════╗");
+                    Console.WriteLine(optionSelected == 0 ?
+                                            "      ║  OPTIONS        ║" :
+                                            "      ║OPTIONS          ║"
+                    );
+                    Console.WriteLine(optionSelected == 1 ?
+                                            "      ║  RESUME         ║" :
+                                            "      ║RESUME           ║"
+                    );
+                    Console.WriteLine(optionSelected == 2 ?
+                                            "      ║  QUIT           ║" :
+                                            "      ║QUIT             ║"
+                    );
+                    Console.WriteLine("      ╚═════════════════╝");
+                    Console.WriteLine("\n");
+
+                    inputHandler.update(0);
                 }
                 
                 Console.WriteLine("\n");
-                Console.WriteLine("Press p to pause the game");
+                if (gameState == 1) Console.WriteLine("Press p to pause the game");
 
                 // Calculate and show fps
                 stopwatch.Stop();

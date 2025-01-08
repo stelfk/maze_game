@@ -27,3 +27,4 @@
 /home/stel/maze_game/Maze/obj/Debug/net8.0/Maze.pdb
 /home/stel/maze_game/Maze/obj/Debug/net8.0/Maze.genruntimeconfig.cache
 /home/stel/maze_game/Maze/obj/Debug/net8.0/ref/Maze.dll
+/home/stel/Documents/cs/maze_no_way/Maze/obj/Debug/net8.0/Maze.sourcelink.json

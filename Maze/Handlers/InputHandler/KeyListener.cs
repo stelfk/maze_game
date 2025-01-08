@@ -39,8 +39,41 @@ namespace Maze {
                         }
                     break;
 
+                    // Misc.
+                    case ConsoleKey.P:
+                        Program.optionSelected = 0;
+                        Program.gameState = 2;
+                    break;
+
 
                     default: break;
+                }
+            }
+        }
+
+        public static void startMenu() {
+            if (Console.KeyAvailable) {
+                ConsoleKeyInfo key = Console.ReadKey(intercept: true);
+                switch (key.Key){
+                    case ConsoleKey.UpArrow:
+                        if (Program.optionSelected > 0) Program.optionSelected--;
+                        else Program.optionSelected = 2;
+                    break;
+
+                    case ConsoleKey.DownArrow:
+                        if (Program.optionSelected < 2) Program.optionSelected++;
+                        else Program.optionSelected = 0;
+                    break;
+
+                    case ConsoleKey.Enter:
+                        if (Program.optionSelected == 1) Program.gameState = 1;
+                        if (Program.optionSelected == 2) {
+                            Program.quit = true;
+                        }
+                    break;
+
+                    default:
+                    break;
                 }
             }
         }

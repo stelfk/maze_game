@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kufJt4BwAdYrw+QwY2q0t+M6Qm1s5z6vxF2/kje+bLKr3YOYf0MjwwFDlnaDgFJW9vRp8/SJ3lOAOozFVv06AA==",
+  "dgSpecHash": "279CtS3y6ZbaOSZVtIMsCs2e+SDCLonoMzemoeKo/jI2T9BAel15/36H5lg6nFI6oP2Jv48RncT7RZIJcsFadQ==",
   "success": true,
-  "projectFilePath": "/home/stel/maze_game/Maze/Maze.csproj",
+  "projectFilePath": "/home/stel/Documents/cs/maze_no_way/Maze/Maze.csproj",
   "expectedPackageFiles": [
     "/home/stel/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
   ],

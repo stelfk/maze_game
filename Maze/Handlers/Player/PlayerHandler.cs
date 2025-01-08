@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace Maze {
     class PlayerHandler {
-        public Player plrOne = new Player(1, 20, "@");
+        public Player plrOne = new Player(1, 20, "☻");
         public Player plrTwo = new Player(1, 2, "*");
         
         //public Player[] players = new Player[]{};
