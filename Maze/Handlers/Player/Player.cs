@@ -6,8 +6,8 @@ namespace Maze {
         public string Icon;
 
         public Player(int x, int y, string icon) {
-            X = y;
-            Y = x;
+            X = x;
+            Y = y;
             Icon = icon;
         }
     }

@@ -10,8 +10,8 @@ namespace Maze {
         public static MapHandler mapHandler = new MapHandler(); 
 
         // Game settings etc.
-        public static Boolean showfps = true;
-        public static int refreshDelay = 32;
+        public static Boolean showfps = false;
+        public static int refreshDelay = 256;
         public static Boolean quit = false;
         public const int maxPlayers = 2;
         public static int plrCount = 1;
@@ -58,28 +58,38 @@ namespace Maze {
 
             // Game loop
             while (!quit) {
+                if (showfps) Console.WriteLine($"FPS: {Math.Round(fps)} \n");
+                else Console.WriteLine("\n");
+                
                 // Start timing frame
                 stopwatch.Restart();
-
-                // Listen to keyboard
-                inputHandler.update();
-
-                // Update maze
-                mapHandler.updateMap(
-                    currentMap == null ? Maps.maze00 : currentMap,
-                    plrHandler.players
-                );
-
-                // Draw maze
-                mapHandler.drawMap(
-                    currentMap == null ? Maps.maze00 : currentMap
-                );
                 
+                if (gameState == 1) { // In game
+                    // Listen to keyboard
+                    inputHandler.update();
+
+                    // Update maze
+                    mapHandler.updateMap(
+                        currentMap == null ? Maps.maze00 : currentMap,
+                        plrHandler.players
+                    );
+
+                    // Draw maze
+                    mapHandler.drawMap(
+                        currentMap == null ? Maps.maze00 : currentMap
+                    );
+                } else if (gameState == 2) { // Paused
+                    // TODO: Pause menu
+                }
+                
+                Console.WriteLine("\n");
+                Console.WriteLine("Press p to pause the game");
+
                 // Calculate and show fps
                 stopwatch.Stop();
                 frameTime = stopwatch.Elapsed.TotalMilliseconds + refreshDelay;
                 fps = frameTime > 0 ? 1000 / frameTime : 0;
-                if (showfps) Console.WriteLine($"FPS: {Math.Round(fps)}");
+                //if (showfps) Console.WriteLine($"FPS: {Math.Round(fps)}");
 
                 // Clear screen
                 sleep(refreshDelay);
